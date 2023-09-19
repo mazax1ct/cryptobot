@@ -1,0 +1,39 @@
+.main-page {
+    .footer {
+        background-color: var(--black);
+    }
+}
+
+.footer {
+    flex-shrink: 0;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.53846;
+
+    &__container {
+        padding: calc(var(--base_gap) * 2);
+        text-align: center;
+        @media(min-width: $md) {
+            align-items: flex-end;
+            display: flex;
+            padding: calc(var(--base_gap) * 1.6666666) calc(var(--base_gap) * 2);
+            text-align: left;
+        }
+    }
+
+    &__address {
+        margin-right: auto;
+        @media(max-width: $md - 1px) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__contacts {
+        @media(min-width: $md) {
+            margin-right: 92px;
+        }
+        @media(max-width: $md - 1px) {
+            margin-bottom: 24px;
+        }
+    }
+}

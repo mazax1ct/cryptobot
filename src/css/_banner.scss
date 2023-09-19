@@ -1,0 +1,93 @@
+.banner {
+    align-items: center;
+    background: linear-gradient(180deg, #08413A 0%, #0F3632 25%, #1F1F1F 100%);
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    position: relative;
+    z-index: auto;
+    @media(min-width: $hd) {
+        max-height: 880px;
+        padding-top: 96px;
+    }
+    @media(min-width: $fhd) {
+        height: 880px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 40px;
+        @media(min-width: $hd) {
+            margin-bottom: 80px;
+        }
+    }
+
+    &__image {
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+
+        &::after {
+            @media(max-width: $hd - 1px) {
+                background-color: rgba(#000, 0.5);
+                bottom: 0;
+                content: '';
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: 1;
+            }
+        }
+
+        img {
+            display: block;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            object-fit: cover;
+            object-position: center bottom;
+        }
+    }
+
+    &__content {
+        max-width: calc(1240px + calc(var(--base_gap) * 2));
+        margin-left: auto;
+        margin-right: auto;
+        padding: 40px calc(var(--base_gap) * 2);
+        position: relative;
+        width: 100%;
+        z-index: 2;
+        @media(min-width: $hd) {
+            max-width: calc(1240px + calc(var(--base_gap) * 2 * 1.6666666));
+            padding: 80px calc(var(--base_gap) * 1.6666666);
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 40px;
+        margin-top: 0;
+        @media(min-width: $hd) {
+            font-size: 40px;
+            margin-bottom: 80px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 40px;
+        @media(min-width: $hd) {
+            margin-bottom: 80px;
+        }
+
+        span {
+            color: var(--primary);
+            font-size: 32px;
+            font-weight: 700;
+        }
+    }
+}
