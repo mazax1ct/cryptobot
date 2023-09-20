@@ -1,14 +1,14 @@
 .button {
     align-items: center;
-    border: none;
+    border: 1px solid transparent;
     color: #fff;
     cursor: pointer;
     display: inline-flex;
     gap: 8px;
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 500;
     justify-content: center;
-    line-height: 1.6;
+    line-height: 1.5;
     position: relative;
     overflow: hidden;
     text-decoration: none;
@@ -16,39 +16,44 @@
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
+    z-index: auto;
 
     svg {
-        fill: rgba(#fff, 0.4);
-        height: 24px;
-        min-width: 24px;
+        height: 20px;
+        min-width: 20px;
         transition: fill 0.3s;
-        width: 24px;
+        width: 20px;
+    }
+
+    span,
+    svg {
+        position: relative;
+        z-index: 2;
     }
 
     &.disabled,
     &:disabled,
     &[data-disabled] {
+        background-color: var(--background);
+        color: var(--grey);
         cursor: default;
-        opacity: 0.6;
         pointer-events: none;
 
         &::after {
             display: none;
         }
-    }
 
-    &:not(.disabled),
-    &:not(:disabled),
-    &:not([data-disabled]) {
-        @include hover {
+        svg {
+            fill: var(--grey);
+        }
+
+        &.button--bordered {
+            border-color: var(--grey);
+            background-color: transparent;
+            color: var(--grey);
+
             svg {
-                fill: #fff;
-            }
-
-            &.button--white {
-                svg {
-                    fill: #000;
-                }
+                fill: var(--grey);
             }
         }
     }
@@ -59,22 +64,24 @@
         svg {
             fill: #fff;
         }
-    }
-
-    &--red_bordered {
-        border: 1px solid var(--f-warning);
-        background-color: transparent;
-        color: var(--f-warning);
-
-        svg {
-            fill: var(--f-warning);
-        }
         @include hover {
-            background-color: var(--f-warning);
             color: #fff;
+        }
+
+        &.button--bordered {
+            color: var(--f-warning);
+            border-color: var(--f-warning);
 
             svg {
-                fill: #fff;
+                fill: var(--f-warning);
+            }
+            @include hover {
+                background-color: var(--f-warning);
+                color: #fff;
+
+                svg {
+                    fill: #fff;
+                }
             }
         }
     }
@@ -85,28 +92,34 @@
         svg {
             fill: #fff;
         }
-    }
-
-    &--green_bordered {
-        border: 1px solid var(--primary-a);
-        background-color: transparent;
-        color: var(--primary);
-
-        svg {
-            fill: var(--primary);
-        }
         @include hover {
-            background-color: var(--primary-a);
             color: #fff;
+        }
+
+        &.button--bordered {
+            color: var(--primary);
+            border-color: var(--primary-a);
 
             svg {
-                fill: #fff;
+                fill: var(--primary);
+            }
+            @include hover {
+                background-color: var(--primary-a);
+                color: #fff;
+
+                svg {
+                    fill: #fff;
+                }
             }
         }
     }
 
+    &--bordered {
+        background-color: transparent;
+    }
+
     &--h_32 {
-        border-radius: 20px;
+        border-radius: 8px;
         font-size: 14px;
         height: 32px;
         padding: 4px 16px;
@@ -119,7 +132,7 @@
     }
 
     &--h_36 {
-        border-radius: 20px;
+        border-radius: 8px;
         font-size: 14px;
         height: 36px;
         padding: 4px 16px;
@@ -132,28 +145,34 @@
     }
 
     &--h_40 {
-        border-radius: 20px;
+        border-radius: 10px;
         height: 40px;
         padding: 8px 24px;
     }
 
     &--h_48 {
         border-radius: 12px;
+        font-size: 16px;
         height: 48px;
         padding: 12px 24px;
     }
 
     &--h_56 {
         border-radius: 16px;
+        font-size: 20px;
         height: 56px;
         padding: 14px 48px;
+
+        svg {
+            height: 24px;
+            min-width: 24px;
+            width: 24px;
+        }
     }
 
     &--green,
-    &--red,
-    &--white {
+    &--red {
         position: relative;
-        z-index: 1;
 
         &::after {
             bottom: 0;

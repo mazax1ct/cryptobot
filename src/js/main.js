@@ -1,3 +1,9 @@
+//переопределение дефолтных настроек fancybox
+$.fancybox.defaults.hash = false;
+$.fancybox.defaults.smallBtn = false;
+$.fancybox.defaults.toolbar = false;
+$.fancybox.defaults.touch = false;
+
 //открытие меню на мобильных
 $(document).on('click', '.js-menu-opener', function () {
   $('body').addClass('overflow');
@@ -18,11 +24,60 @@ $(document).on('click', '.js-menu-closer', function () {
   return false;
 });
 
+//тогглер пароля
+$(document).on('click', '.js-toggle-password', function () {
+  if($(this).hasClass('is-toggled')) {
+    $(this).closest('.input').find('input').attr('type', 'password');
+    $(this).removeClass('is-toggled');
+    $(this).attr('title', 'Показать символы');
+    $(this).find('use').attr('xlink:href', 'images/sprite.svg#show_pass');
+  } else {
+    $(this).closest('.input').find('input').attr('type', 'text');
+    $(this).addClass('is-toggled');
+    $(this).attr('title', 'Скрыть символы');
+    $(this).find('use').attr('xlink:href', 'images/sprite.svg#hide_pass');
+  }
+
+  return false;
+});
+
 $(document).ready(function () {
+  //следящее меню
   if ($('.js-main-menu').length) {
     $('.js-main-menu').ddscrollSpy({
       highlightclass: 'is-active',
       scrolltopoffset: -120
     });
   }
+
+  //тултипы
+  tippy('.info-button', {
+    theme: 'custom-dark',
+    trigger: 'click',
+    maxWidth: 360
+  });
+
+  //кастомный селект
+  $('.js-select').each(function() {
+    var $p = $(this).closest('.select-wrapper');
+    $(this).select2({
+      minimumResultsForSearch: Infinity,
+      //dropdownPosition: 'below',
+      dropdownParent: $p,
+    });
+	}).on("select2:open", function (e) {
+    var $p = $(this).closest('.select-wrapper');
+    $p.addClass('open');
+	}).on("select2:close", function (e) {
+    var $p = $(this).closest('.select-wrapper');
+    $p.removeClass('open');
+	});
+
+  //календарь
+  new AirDatepicker('.js-calendar', {});
+});
+
+$(document).on('click', '.js-popup-closer', function () {
+  $.fancybox.close();
+  return false;
 });

@@ -1,0 +1,43 @@
+.form {
+    &__bottom-block {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        &--sticky {
+            background-color: var(--underlay);
+            bottom: -6px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            position: sticky;
+            top: auto;
+        }
+    }
+
+    &__buttons {
+        align-items: center;
+        display: flex;
+        gap: 8px;
+        margin-left: auto;
+    }
+}
+
+.form-field {
+    &:not(:last-child) {
+        margin-bottom: 24px;
+    }
+
+    &__title-block {
+        align-items: center;
+        display: flex;
+        gap: 8px;
+        justify-content: space-between;
+        margin-bottom: 6px;
+    }
+
+    &__title {
+        color: var(--grey);
+        display: block;
+        line-height: 1.25;
+    }
+}
