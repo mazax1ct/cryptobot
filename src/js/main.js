@@ -74,7 +74,11 @@ $(document).ready(function () {
 	});
 
   //календарь
-  new AirDatepicker('.js-calendar', {});
+  let dp = new AirDatepicker('.js-calendar', {
+    onSelect({date}) {
+      dp.hide();
+    }
+  });
 });
 
 $(document).on('click', '.js-popup-closer', function () {
