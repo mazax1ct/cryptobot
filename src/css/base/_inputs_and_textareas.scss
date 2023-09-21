@@ -40,7 +40,8 @@
         }
 
         &.error {
-            background-color: rgba(196, 51, 77, 0.5);
+            //background-color: rgba(196, 51, 77, 0.5);
+            background-color: var(--f-warning);
 
             &::-webkit-input-placeholder {
                 color: var(--comfy-reading);
@@ -89,6 +90,10 @@
             @include hover {
                 svg {
                     fill: #fff;
+
+                    &.green {
+                        fill: var(--primary-a);
+                    }
                 }
             }
         }
@@ -99,6 +104,10 @@
             height: 24px;
             transition: fill 0.3s;
             width: 24px;
+
+            &.green {
+                fill: var(--primary);
+            }
         }
     }
 
@@ -142,7 +151,8 @@
         }
 
         &.error {
-            background-color: rgba(196, 51, 77, 0.5);
+            //background-color: rgba(196, 51, 77, 0.5);
+            background-color: var(--f-warning);
 
             &::-webkit-input-placeholder {
                 color: var(--comfy-reading);

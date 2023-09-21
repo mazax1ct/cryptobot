@@ -1,8 +1,8 @@
 .not-recomendation {
     background-color: var(--darkgrey);
     font-size: 13px;
-    padding: calc(var(--base_gap) * 2);
+    padding: 24px;
     @media(min-width: $hd) {
-        padding: calc(var(--base_gap) * 1.6666666) calc(var(--base_gap) * 2);
+        padding: 40px 48px;
     }
 }

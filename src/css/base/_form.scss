@@ -1,4 +1,12 @@
 .form {
+    &__text {
+        color: var(--comfy-reading);
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
     &__bottom-block {
         align-items: center;
         display: flex;
@@ -11,6 +19,7 @@
             padding-bottom: 8px;
             position: sticky;
             top: auto;
+            z-index: 1;
         }
     }
 
@@ -19,6 +28,21 @@
         display: flex;
         gap: 8px;
         margin-left: auto;
+
+        &--center {
+            margin-right: auto;
+        }
+    }
+
+    &__bottom-link {
+        margin-top: 40px;
+        text-align: center;
+
+        a {
+            @include active-area;
+            position: relative;
+            z-index: auto;
+        }
     }
 }
 
@@ -39,5 +63,18 @@
         color: var(--grey);
         display: block;
         line-height: 1.25;
+    }
+
+    &--checkbox {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: space-between;
+        margin-top: 40px;
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
     }
 }

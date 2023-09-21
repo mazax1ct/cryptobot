@@ -11,12 +11,12 @@
     line-height: 1.53846;
 
     &__container {
-        padding: calc(var(--base_gap) * 2);
+        padding: 24px;
         text-align: center;
         @media(min-width: $md) {
             align-items: flex-end;
             display: flex;
-            padding: calc(var(--base_gap) * 1.6666666) calc(var(--base_gap) * 2);
+            padding: 40px 48px;
             text-align: left;
         }
     }

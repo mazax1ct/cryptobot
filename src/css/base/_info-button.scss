@@ -1,8 +1,10 @@
 .info-button {
     @include button-reset;
     @include active-area;
-    display: block;
+    align-items: center;
+    display: flex;
     height: 20px;
+    justify-content: center;
     position: relative;
     width: 20px;
     z-index: auto;

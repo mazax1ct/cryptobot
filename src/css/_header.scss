@@ -1,51 +1,36 @@
 .header {
+    padding-left: 12px;
+    padding-right: 12px;
+
     &--float {
         left: 0;
         position: fixed;
         right: 0;
         top: 0;
         z-index: 5;
-        padding-left: var(--base_gap);
-        padding-right: var(--base_gap);
 
         .header__container {
-            align-items: center;
             border-radius: 0 0 24px 24px;
             box-shadow: var(--shadow);
             background-color: var(--underlay);
-            display: flex;
-            gap: var(--base_gap);
-            justify-content: space-between;
-            min-height: 48px;
-            padding: var(--base_gap);
-            position: relative;
-            @media(min-width: $hd - 1px) {
+            @media(min-width: $hd) {
                 min-height: 96px;
-                padding: 20px 40px;
+                padding: 20px 40px 0;
             }
         }
     }
 
-    &__back {
-        @include active-area;
+    &__container {
         align-items: center;
         display: flex;
-        font-size: 15px;
-        line-height: 1.53846;
+        gap: 12px;
+        justify-content: space-between;
+        min-height: 48px;
+        padding: 12px;
         position: relative;
-        z-index: 1;
-
-        svg {
-            fill: currentColor;
-            height: 13px;
-            width: 13px;
-        }
-
-        span {
-            margin-left: 6px;
-            @media(max-width: $md - 1px) {
-                display: none;
-            }
+        @media(min-width: $hd) {
+            gap: 24px;
+            padding: 40px 24px;
         }
     }
 
@@ -91,7 +76,7 @@
         height: 16px;
         position: relative;
         width: 16px;
-        @media(min-width: $hd - 1px) {
+        @media(min-width: $hd) {
             display: none;
         }
 
@@ -127,9 +112,6 @@
         right: 0;
         top: 0;
         z-index: 10;
-    }
-    @media(min-width: $hd) {
-        margin-bottom: -20px;
     }
 
     &.is-open {

@@ -1,3 +1,9 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
 body,
 html {
     height: 100%;
@@ -23,9 +29,9 @@ body {
 
 .page-content {
     flex: 1 0 auto;
-    padding: var(--base_gap);
+    padding: 12px;
     @media(min-width: $hd) {
-        padding: calc(var(--base_gap) * 1.3333333333) var(--base_gap);
+        padding: 32px 24px;
     }
 }
 
@@ -35,10 +41,64 @@ body {
     }
 }
 
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
+.form-page {
+    .page-content {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            max-height: 686px;
+
+            .form {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+
+                .form-field--checkbox {
+                    margin-top: 0;
+                    padding-top: 16px;
+
+                    & + .form__bottom-block {
+                        margin-top: auto;
+                    }
+                }
+
+                .form__text {
+                    & + .form__bottom-link {
+                        margin-top: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.columns {
+    --gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: var(--gap);
+    @media(min-width: $hd) {
+        flex-direction: row;
+    }
+    @media(min-width: $hd) {
+        --gap: 24px;
+    }
+
+    & > div {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+        max-width: 100%;
+        @media(min-width: $hd) {
+            width: calc(50% - var(--gap) / 2);
+        }
+    }
 }
 
 a {
@@ -65,6 +125,15 @@ textarea {
     font-size: inherit;
     font-family: inherit;
     line-height: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
 }
 
 p {
@@ -97,6 +166,79 @@ hr {
         margin-top: 0;
         @media(min-width: $hd) {
             margin-top: 0;
+        }
+    }
+}
+
+.color-green {
+    color: var(--primary);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.stripe-table {
+    border-collapse: collapse;
+    line-height: 1.25;
+    text-align: left;
+    width: 100%;
+
+    th {
+        color: var(--grey);
+    }
+
+    td,
+    th {
+        font-weight: 400;
+        padding: 16px;
+    }
+
+    td {}
+
+    tbody {
+        tr {
+            &:nth-child(odd) {
+                background-color: rgba(0,0,0,0.08);
+            }
+
+            &:nth-child(even) {}
+        }
+    }
+}
+
+.report-item {
+    align-items: center;
+    border-radius: 12px;
+    background-color: var(--black);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 52px;
+
+    &__cell {
+        padding: 4px 16px;
+
+        &:first-child {
+            color: var(--grey);
+        }
+
+        &:last-child {
+            align-items: center;
+            display: flex;
+            gap: 8px;
+            font-size: 20px;
+            font-weight: 500;
+            justify-content: flex-end;
+            line-height: 1.4;
+
+            span {
+                white-space: nowrap;
+            }
         }
     }
 }

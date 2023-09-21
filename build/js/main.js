@@ -4,7 +4,7 @@ $.fancybox.defaults.smallBtn = false;
 $.fancybox.defaults.toolbar = false;
 $.fancybox.defaults.touch = false;
 
-//открытие меню на мобильных
+//открытие главного меню на мобильных
 $(document).on('click', '.js-menu-opener', function () {
   $('body').addClass('overflow');
   $('.main-menu').addClass('is-open');
@@ -14,7 +14,7 @@ $(document).on('click', '.js-menu-opener', function () {
   return false;
 });
 
-//закрытие меню на мобильных
+//закрытие главного меню на мобильных
 $(document).on('click', '.js-menu-closer', function () {
   $('.main-menu__inner').removeClass('is-open');
   setTimeout(function() {
@@ -81,7 +81,28 @@ $(document).ready(function () {
   });
 });
 
+//закрытие fancybox
 $(document).on('click', '.js-popup-closer', function () {
   $.fancybox.close();
+  return false;
+});
+
+//открытие меню в личном кабинете на мобильных
+$(document).on('click', '.js-personal-menu-opener', function () {
+  $('body').addClass('overflow');
+  $('.personal-menu').addClass('is-open');
+  setTimeout(function() {
+    $('.personal-menu__inner').addClass('is-open');
+  }, 100);
+  return false;
+});
+
+//закрытие меню в личном кабинете на мобильных
+$(document).on('click', '.js-personal-menu-closer', function () {
+  $('.personal-menu__inner').removeClass('is-open');
+  setTimeout(function() {
+    $('body').removeClass('overflow');
+    $('.personal-menu').removeClass('is-open');
+  }, 400);
   return false;
 });

@@ -54,16 +54,16 @@
     }
 
     &__content {
-        max-width: calc(1240px + calc(var(--base_gap) * 2));
+        max-width: calc(1240px + 24px);
         margin-left: auto;
         margin-right: auto;
-        padding: 40px calc(var(--base_gap) * 2);
+        padding: 40px 24px;
         position: relative;
         width: 100%;
         z-index: 2;
         @media(min-width: $hd) {
-            max-width: calc(1240px + calc(var(--base_gap) * 2 * 1.6666666));
-            padding: 80px calc(var(--base_gap) * 1.6666666);
+            max-width: calc(1240px + 40px);
+            padding: 80px 20px;
         }
     }
 

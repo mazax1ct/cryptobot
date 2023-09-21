@@ -193,3 +193,27 @@
         }
     }
 }
+
+.link-button {
+    @include button-reset;
+    @include active-area;
+    color: var(--primary-a);
+    position: relative;
+    transition: color 0.3s;
+    z-index: auto;
+    @include hover {
+        color: var(--primary);
+    }
+
+    &.disabled,
+    &:disabled,
+    &[data-disabled] {
+        color: var(--grey);
+        cursor: default;
+        pointer-events: none;
+
+        &::after {
+            display: none;
+        }
+    }
+}
