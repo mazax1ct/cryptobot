@@ -10,6 +10,8 @@
     &__bottom-block {
         align-items: center;
         display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
         justify-content: space-between;
 
         &--sticky {
@@ -42,6 +44,16 @@
             @include active-area;
             position: relative;
             z-index: auto;
+        }
+    }
+
+    &__bottom-error {
+        color: var(--f-warning);
+    }
+
+    .image-radios {
+        &:not(:last-child) {
+            margin-bottom: 24px;
         }
     }
 }

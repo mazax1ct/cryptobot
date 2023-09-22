@@ -9,7 +9,10 @@
 @import "base/_info-button.scss";
 @import "base/_checkboxes_and_radio.scss";
 @import "base/_inputs_and_textareas.scss";
+@import "base/_image-radios.scss";
 @import "base/_socials-links.scss";
+@import "base/_status.scss";
+@import "base/_tabs-menu.scss";
 @import "base/_tippy-custom-dark-theme.scss";
 @import "plugins/select2.css";
 @import "base/_select2-custom.scss";
@@ -22,4 +25,8 @@
 @import "_page-section.scss";
 @import "_not-recomendation.scss";
 @import "_personal.scss";
+@import "_report.scss";
+@import "_api-key.scss";
+@import "_bot.scss";
+@import "_course.scss";
 @import "_footer.scss";

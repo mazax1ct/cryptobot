@@ -1,0 +1,44 @@
+.api-keys {
+    .api-key {
+        &:not(:last-child) {
+            margin-bottom: 4px;
+        }
+    }
+}
+
+.api-key {
+    align-items: center;
+    border-radius: 12px;
+    background-color: var(--darkgrey);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 24px 32px;
+
+    &__left {
+        align-items: center;
+        display: flex;
+        gap: 16px;
+    }
+
+    &__image {
+        align-items: center;
+        border-radius: 12px;
+        background-color: var(--black);
+        display: flex;
+        justify-content: center;
+        height: 64px;
+        padding: 8px;
+        width: 120px;
+    }
+
+    &__right {
+        align-items: center;
+        display: flex;
+        gap: 16px;
+    }
+
+    &__date {
+        color: var(--grey);
+    }
+}

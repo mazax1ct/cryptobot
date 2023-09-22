@@ -73,10 +73,20 @@ $(document).ready(function () {
     $p.removeClass('open');
 	});
 
+  $('.js-calendar').each(function( index ) {
+    console.log( index + ": " + $( this ).text() );
+  });
+
   //календарь
-  let dp = new AirDatepicker('.js-calendar', {
+  let dp = new AirDatepicker('.js-calendar-start', {
     onSelect({date}) {
       dp.hide();
+    }
+  });
+
+  let dp_2 = new AirDatepicker('.js-calendar-end', {
+    onSelect({date}) {
+      dp_2.hide();
     }
   });
 });
