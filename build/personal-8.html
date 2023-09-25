@@ -37,20 +37,20 @@
                         <p>Криптобот RealTrade</p>
                         <p><a href="#">🠐 Вернуться на основной сайт</a></p>
                     </div>
-
+                
                     <button class="js-personal-menu-opener personal__burger" type="button" title="Меню">
                         <svg aria-hidden="true">
                             <use xlink:href="images/sprite.svg#menu" />
                         </svg>
                     </button>
                 </div>
-
+                
                 <div class="personal-menu">
                     <div class="personal-menu__inner">
                         <div class="avatar">
                             <img src="images/content/avatar.jpg" srcset="images/content/avatar@2x.jpg" alt="Имя пользователя" title="Имя пользователя">
                         </div>
-
+                
                         <nav>
                             <ul class="personal-menu__list">
                                 <li class="personal-menu__item">
@@ -104,7 +104,7 @@
                             </ul>
                         </nav>
                     </div>
-
+                
                     <button class="js-personal-menu-closer personal-menu__closer" type="button" title="Закрыть меню">
                         <svg aria-hidden="true">
                             <use xlink:href="images/sprite.svg#close" />
@@ -114,30 +114,64 @@
             </div>
 
             <div class="personal__right">
-                <div class="box box--full_height">
-                    <div class="box__title-block">
-                        <div class="tabs-menu">
-                            <ul class="tabs-menu__list">
-                                <li class="tabs-menu__item">
-                                    <a class="tabs-menu__link is-active" href="#">Управление ботами</a>
-                                </li>
-                                <li class="tabs-menu__item">
-                                    <a class="tabs-menu__link" href="#">Проверка стратегий</a>
-                                </li>
-                            </ul>
+                <div class="box">
+                    <form class="filter" action="">
+                        <div class="filter__item">
+                            <div class="radio-buttons">
+                                <label class="radio-button">
+                                    <input type="radio" name="period" value="all">
+                                    <span class="radio-button__text">За все время</span>
+                                </label>
+                                <label class="radio-button">
+                                    <input type="radio" name="period" value="days_30">
+                                    <span class="radio-button__text">30 дней</span>
+                                </label>
+                                <label class="radio-button">
+                                    <input type="radio" name="period" value="days_7">
+                                    <span class="radio-button__text">7 дней</span>
+                                </label>
+                            </div>
                         </div>
-
-                        <div class="box__title-controls">
-                            <a href="#">Как настроить бота?</a>
-                            <button class="button button--green button--h_48" data-fancybox data-src="#bot_add" type="button">Создать бота</button>
+                        <div class="filter__item">
+                            <div class="form-field">
+                                <div class="form-field__title-block">
+                                    <label class="form-field__title" for="start">Дата начала периода</label>
+                                </div>
+                                <div class="input">
+                                    <input id="start" class="js-calendar-start input__input input__input--calendar" type="text" name="" value="" placeholder="Не указано">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="box__note">
-                        <div>
-                            <p>Добро пожаловать! Добавьте свои API-ключи от биржи, чтобы настроить своего торгового бота!</p>
+                        <div class="filter__item">
+                            <div class="form-field">
+                                <div class="form-field__title-block">
+                                    <label class="form-field__title" for="end">Дата окончания периода</label>
+                                </div>
+                                <div class="input">
+                                    <input id="end" class="js-calendar-end input__input input__input--calendar" type="text" name="" value="" placeholder="Не указано">
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                        <div class="filter__item">
+                            <div class="form-field">
+                                <div class="form-field__title-block">
+                                    <label class="form-field__title">Биржа</label>
+                                </div>
+                                <div class="select-wrapper">
+                                    <select class="js-select" data-placeholder="Не выбрано">
+                                        <option></option>
+                                        <option value="1">Huobi</option>
+                                        <option value="2">ByBit</option>
+                                        <option value="3">Bitget</option>
+                                        <option value="4">Binance</option>
+                                        <option value="5">Kucoin</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter__item"></div>
+                        <div class="filter__item"></div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -372,7 +406,7 @@
     
             <div class="form__bottom-block">
                 <div class="form__buttons">
-                    <button class="js-popup-closer button button--green button--bordered button--h_48" type="button"><span>Закрыть</span></button>
+                    <button class="js-popup-closer button button--green button--bordered button--h_48" type="button"><span>Отмена</span></button>
                     <button class="button button--red button--h_48" type="button"><span>Удалить</span></button>
                 </div>
             </div>
@@ -390,6 +424,468 @@
         </div>
     
         <form class="form" action="">
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="bot_name">Имя бота</label>
+                </div>
+                <div class="input">
+                    <input id="bot_name" class="input__input" type="text" name="bot_name" value="" placeholder="Не указано">
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title">Биржа</label>
+                </div>
+                <div class="select-wrapper">
+                    <select class="js-select" data-placeholder="Не выбрано">
+                        <option></option>
+                        <option value="1">Huobi</option>
+                        <option value="2">ByBit</option>
+                        <option value="3">Bitget</option>
+                        <option value="4">Binance</option>
+                        <option value="5">Kucoin</option>
+                    </select>
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="pair">Пара</label>
+                    <button class="info-button" type="button" title="Информация" data-tippy-content="Вы можете выбрать любую пару, которая представлена на фьючерсах. По умолчанию выбрана BTC / USDT.">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#question" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="input">
+                    <input id="pair" class="input__input" type="text" name="pair" value="" placeholder="Не указано">
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="depo">Депо, %</label>
+                    <button class="info-button" type="button" title="Информация" data-tippy-content="Полезная информация">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#question" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="input">
+                    <input id="depo" class="input__input" type="text" name="depo" value="" placeholder="Введите значение">
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="step">Шаг сетки, %</label>
+                    <button class="info-button" type="button" title="Информация" data-tippy-content="Полезная информация">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#question" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="input">
+                    <input id="step" class="input__input" type="text" name="step" value="" placeholder="Введите значение">
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="deal_depo">Депо сделки, %</label>
+                    <button class="info-button" type="button" title="Информация" data-tippy-content="Полезная информация">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#question" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="input">
+                    <input id="deal_depo" class="input__input" type="text" name="deal_depo" value="" placeholder="Введите значение">
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="shoulder">Плечо</label>
+                    <button class="info-button" type="button" title="Информация" data-tippy-content="Полезная информация">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#question" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="input">
+                    <input id="shoulder" class="input__input" type="text" name="shoulder" value="" placeholder="Введите значение">
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="sl">SL сделки, %</label>
+                    <button class="info-button" type="button" title="Информация" data-tippy-content="Полезная информация">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#question" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="input">
+                    <input id="sl" class="input__input" type="text" name="sl" value="" placeholder="Введите значение">
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="tp">TP сделки, %</label>
+                    <button class="info-button" type="button" title="Информация" data-tippy-content="Полезная информация">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#question" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="input">
+                    <input id="tp" class="input__input" type="text" name="tp" value="" placeholder="Введите значение">
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="grids">Кол-во сеток</label>
+                    <button class="info-button" type="button" title="Информация" data-tippy-content="Полезная информация">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#question" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="input">
+                    <input id="grids" class="input__input" type="text" name="grids" value="" placeholder="Введите значение">
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="enter">Точка входа</label>
+                    <button class="info-button" type="button" title="Информация" data-tippy-content="Полезная информация">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#question" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="input">
+                    <input id="enter" class="input__input" type="text" name="enter" value="" placeholder="Введите значение">
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="price">Точная цена</label>
+                    <button class="info-button" type="button" title="Информация" data-tippy-content="Полезная информация">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#question" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="input">
+                    <input id="price" class="input__input" type="text" name="price" value="" placeholder="Введите значение">
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="all_sl">Общий SL, %</label>
+                    <button class="info-button" type="button" title="Информация" data-tippy-content="Полезная информация">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#question" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="input">
+                    <input id="all_sl" class="input__input" type="text" name="all_sl" value="" placeholder="Введите значение">
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title">Реинвестирование</label>
+                </div>
+                <div class="radio-group">
+                    <label class="radio">
+                        <input type="radio" name="reinvest" value="y">
+                        <span class="radio__icon"></span>
+                        <span class="radio__text">Да</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="reinvest" value="n">
+                        <span class="radio__icon"></span>
+                        <span class="radio__text">Нет</span>
+                    </label>
+                </div>
+            </div>
+    
+            <div class="form__bottom-block form__bottom-block--sticky">
+                <div class="form__buttons">
+                    <button class="js-popup-closer button button--green button--bordered button--h_48" type="button"><span>Отмена</span></button>
+                    <button class="button button--green button--h_48" type="button"><span>Сохранить</span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div id="bot_delete" class="box box--480" style="display: none">
+        <div class="box__title-block">
+            <p class="box__title">Удаление бота</p>
+            <button class="js-popup-closer box__closer" type="button" title="Закрыть">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#close" />
+                </svg>
+            </button>
+        </div>
+    
+        <form class="form" action="">
+            <div class="form__text">
+                <p>Вы уверены, что хотите удалить бота <span class="color-green">«Breaking Bad»</span>?</p>
+            </div>
+    
+            <div class="form__bottom-block">
+                <div class="form__buttons">
+                    <button class="js-popup-closer button button--green button--bordered button--h_48" type="button"><span>Отмена</span></button>
+                    <button class="button button--red button--h_48" type="button"><span>Удалить</span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div id="bot_stats" class="box box--560" style="display: none">
+        <div class="box__title-block">
+            <p class="box__title">«Клин клином вышибают» — Отчет</p>
+            <button class="js-popup-closer box__closer" type="button" title="Закрыть">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#close" />
+                </svg>
+            </button>
+        </div>
+    
+        <div class="form">
+            <div class="report">
+                <div class="report-item">
+                    <div class="report-item__cell">ROI, %</div>
+                    <div class="report-item__cell">
+                        <span class="color-green">+115,90%</span>
+                        <button class="info-button" type="button" title="Информация" data-tippy-content="Какая-то полезна информация">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#question" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+    
+                <div class="report-item">
+                    <div class="report-item__cell">Процент успешных сделок</div>
+                    <div class="report-item__cell">
+                        <span>77,27%</span>
+                        <button class="info-button" type="button" title="Информация" data-tippy-content="Какая-то полезна информация">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#question" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+    
+                <div class="report-item">
+                    <div class="report-item__cell">Макс. просадка</div>
+                    <div class="report-item__cell">
+                        <span>3,69%</span>
+                        <button class="info-button" type="button" title="Информация" data-tippy-content="Какая-то полезна информация">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#question" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+    
+                <div class="report-item">
+                    <div class="report-item__cell">Средняя просадка</div>
+                    <div class="report-item__cell">
+                        <span>1,68%</span>
+                        <button class="info-button" type="button" title="Информация" data-tippy-content="Какая-то полезна информация">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#question" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+    
+                <div class="report-item">
+                    <div class="report-item__cell">PNL бота</div>
+                    <div class="report-item__cell">
+                        <span>115,56 USDT</span>
+                        <button class="info-button" type="button" title="Информация" data-tippy-content="Какая-то полезна информация">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#question" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+    
+                <div class="report-item">
+                    <div class="report-item__cell">Общий объем сделок</div>
+                    <div class="report-item__cell">
+                        <span>547</span>
+                        <button class="info-button" type="button" title="Информация" data-tippy-content="Какая-то полезна информация">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#question" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+    
+                <div class="report-item">
+                    <div class="report-item__cell">Частота сделок</div>
+                    <div class="report-item__cell">
+                        <span>15/день</span>
+                        <button class="info-button" type="button" title="Информация" data-tippy-content="Какая-то полезна информация">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#question" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+    
+                <div class="report-item">
+                    <div class="report-item__cell">Всего сделок</div>
+                    <div class="report-item__cell">
+                        <span>257</span>
+                        <button class="info-button" type="button" title="Информация" data-tippy-content="Какая-то полезна информация">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#question" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="form__bottom-block form__bottom-block--sticky">
+                <div class="form__buttons">
+                    <button class="js-popup-closer button button--green button--bordered button--h_48" type="button"><span>Закрыть</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="bot_settings" class="box box--560" style="display: none">
+        <div class="box__title-block">
+            <p class="box__title">«Клин клином вышибают»</p>
+            <button class="js-popup-closer box__closer" type="button" title="Закрыть">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#close" />
+                </svg>
+            </button>
+        </div>
+    
+        <div class="form">
+            <div class="report">
+                <table class="stripe-table">
+                    <tbody>
+                        <tr>
+                            <th>Биржа</th>
+                            <td class="text-right">Huobi</td>
+                        </tr>
+                        <tr>
+                            <th>Пара</th>
+                            <td class="text-right">USDT/BTC</td>
+                        </tr>
+                        <tr>
+                            <th>Начало периода</th>
+                            <td class="text-right">20.12.2022</td>
+                        </tr>
+                        <tr>
+                            <th>Конец периода</th>
+                            <td class="text-right">20.01.2023</td>
+                        </tr>
+                        <tr>
+                            <th>Депо</th>
+                            <td class="text-right">23,60%</td>
+                        </tr>
+                        <tr>
+                            <th>Шаг сетки</th>
+                            <td class="text-right">5,00%</td>
+                        </tr>
+                        <tr>
+                            <th>Депо сделки</th>
+                            <td class="text-right">10,00%</td>
+                        </tr>
+                        <tr>
+                            <th>Плечо</th>
+                            <td class="text-right">5</td>
+                        </tr>
+                        <tr>
+                            <th>SL сделки</th>
+                            <td class="text-right">42,00%</td>
+                        </tr>
+                        <tr>
+                            <th>TP сделки</th>
+                            <td class="text-right">45,00%</td>
+                        </tr>
+                        <tr>
+                            <th>Кол-во сеток</th>
+                            <td class="text-right">2</td>
+                        </tr>
+                        <tr>
+                            <th>Точка входа</th>
+                            <td class="text-right">long</td>
+                        </tr>
+                        <tr>
+                            <th>Точная цена</th>
+                            <td class="text-right">5,00 USDT</td>
+                        </tr>
+                        <tr>
+                            <th>Общий SL</th>
+                            <td class="text-right">45,00%</td>
+                        </tr>
+                        <tr>
+                            <th>Реинвестирование</th>
+                            <td class="text-right">Да</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+            <div class="form__bottom-block form__bottom-block--sticky">
+                <div class="form__buttons">
+                    <button class="js-popup-closer button button--green button--bordered button--h_48" type="button"><span>Закрыть</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="strategy_add" class="box box--560" style="display: none">
+        <div class="box__title-block">
+            <p class="box__title">Создание бота (проверка стратегии)</p>
+            <button class="js-popup-closer box__closer" type="button" title="Закрыть">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#close" />
+                </svg>
+            </button>
+        </div>
+    
+        <form class="form" action="">
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="start">Дата начала периода</label>
+                </div>
+                <div class="input">
+                    <input id="start" class="js-calendar-start input__input input__input--calendar" type="text" name="" value="" placeholder="Не указано">
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="end">Дата окончания периода</label>
+                </div>
+                <div class="input">
+                    <input id="end" class="js-calendar-end input__input input__input--calendar" type="text" name="" value="" placeholder="Не указано">
+                </div>
+            </div>
+    
             <div class="form-field">
                 <div class="form-field__title-block">
                     <label class="form-field__title" for="bot_name">Имя бота</label>

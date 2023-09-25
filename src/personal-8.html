@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>CRYPTOBOT</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/fonts_preload.html
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <main class="page-content">
+        <div class="personal">
+            <div class="personal__left">
+                //= template/personal-left.html
+            </div>
+
+            <div class="personal__right">
+                <div class="box">
+                    <form class="filter" action="">
+                        <div class="filter__item">
+                            <div class="radio-buttons">
+                                <label class="radio-button">
+                                    <input type="radio" name="period" value="all">
+                                    <span class="radio-button__text">За все время</span>
+                                </label>
+                                <label class="radio-button">
+                                    <input type="radio" name="period" value="days_30">
+                                    <span class="radio-button__text">30 дней</span>
+                                </label>
+                                <label class="radio-button">
+                                    <input type="radio" name="period" value="days_7">
+                                    <span class="radio-button__text">7 дней</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter__item">
+                            <div class="form-field">
+                                <div class="form-field__title-block">
+                                    <label class="form-field__title" for="start">Дата начала периода</label>
+                                </div>
+                                <div class="input">
+                                    <input id="start" class="js-calendar-start input__input input__input--calendar" type="text" name="" value="" placeholder="Не указано">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter__item">
+                            <div class="form-field">
+                                <div class="form-field__title-block">
+                                    <label class="form-field__title" for="end">Дата окончания периода</label>
+                                </div>
+                                <div class="input">
+                                    <input id="end" class="js-calendar-end input__input input__input--calendar" type="text" name="" value="" placeholder="Не указано">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter__item">
+                            <div class="form-field">
+                                <div class="form-field__title-block">
+                                    <label class="form-field__title">Биржа</label>
+                                </div>
+                                <div class="select-wrapper">
+                                    <select class="js-select" data-placeholder="Не выбрано">
+                                        <option></option>
+                                        <option value="1">Huobi</option>
+                                        <option value="2">ByBit</option>
+                                        <option value="3">Bitget</option>
+                                        <option value="4">Binance</option>
+                                        <option value="5">Kucoin</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter__item"></div>
+                        <div class="filter__item"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    //= template/footer.html
+
+    //= template/popups.html
+</body>
+
+//= template/scripts.html
+
+</html>

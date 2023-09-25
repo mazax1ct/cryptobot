@@ -116,3 +116,10 @@ $(document).on('click', '.js-personal-menu-closer', function () {
   }, 400);
   return false;
 });
+
+//аккордион
+$(document).on('click', '.accordion__toggler', function () {
+  $(this).closest('.accordion').toggleClass('is-open');
+  $(this).closest('.accordion').find('.accordion__body').slideToggle();
+  return false;
+});
