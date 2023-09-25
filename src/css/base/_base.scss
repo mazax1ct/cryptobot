@@ -210,3 +210,60 @@ hr {
         }
     }
 }
+
+.stripe-table-2 {
+    border-collapse: collapse;
+    color: var(--comfy-reading);
+    font-size: 14px;
+    line-height: 1.42857;
+    text-align: left;
+    width: 100%;
+
+    thead {
+        @media(max-width: $sm - 1px) {
+            display: none;
+        }
+    }
+
+    th {
+        color: var(--light);
+        background-color: var(--darkgrey);
+    }
+
+    td,
+    th {
+        font-weight: 400;
+        padding: 8px;
+        @media(min-width: $sm) {
+            height: 52px;
+        }
+    }
+
+    td {
+        @media(max-width: $sm - 1px) {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            height: 32px;
+            padding: 4px 8px;
+        }
+
+        &::before {
+            @media(max-width: $sm - 1px) {
+                content: attr(data-title);
+                display: block;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            &:nth-child(odd) {}
+
+            &:nth-child(even) {
+                background-color: rgba(255,255,255,0.02);
+            }
+        }
+    }
+}

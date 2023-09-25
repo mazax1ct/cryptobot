@@ -53,7 +53,7 @@
         z-index: 5;
         @media(min-width: $sm) {
             min-height: 96px;
-            padding: 24px;
+            padding: 24px 16px;
         }
         @media(min-width: $hd) {
             background-color: var(--underlay);
@@ -111,7 +111,7 @@
     @media(min-width: $hd) {
         background-color: var(--underlay);
         border-radius: 24px;
-        padding: 24px;
+        padding: 24px 16px;
     }
     @media(min-width: $fhd) {
         padding: 40px;
@@ -166,6 +166,10 @@
         @include list-reset;
         margin-left: -24px;
         margin-right: -24px;
+        @media(min-width: $hd) {
+            margin-left: -16px;
+            margin-right: -16px;
+        }
         @media(min-width: $fhd) {
             margin-left: -40px;
             margin-right: -40px;
@@ -183,6 +187,9 @@
         font-weight: 300;
         min-height: 52px;
         padding-left: 24px;
+        @media(min-width: $hd) {
+            padding-left: 16px;
+        }
         @media(min-width: $fhd) {
             padding-left: 40px;
         }

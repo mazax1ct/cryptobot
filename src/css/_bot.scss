@@ -20,10 +20,11 @@
     justify-content: space-between;
     padding: 12px;
     @media(min-width: $hd) {
-        padding: 24px 32px;
+        padding: 24px 16px;
     }
-    @media(min-width: $hd) {
-        padding: 24px 32px;
+    @media(min-width: $fhd) {
+        padding-left: 32px;
+        padding-right: 32px;
     }
 
     &--not_active {

@@ -31,7 +31,11 @@
         transition: border-radius 0.3s;
         width: 100%;
         @media(min-width: $sm) {
-            padding: 24px 32px;
+            padding: 24px 16px;
+        }
+        @media(min-width: $fhd) {
+            padding-left: 32px;
+            padding-right: 32px;
         }
 
         svg {

@@ -13,12 +13,12 @@
     &__text-block {
         background-color: var(--darkgrey);
         border-radius: 12px;
-        padding: 24px;
+        padding: 12px;
         width: 100%;
         @media(min-width: $md) {
             width: calc(38% - 4px);
         }
-        @media(min-width: $hd) {
+        @media(min-width: $fhd) {
             padding-left: 32px;
             padding-right: 32px;
         }

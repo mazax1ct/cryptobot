@@ -3,40 +3,29 @@
     border-radius: 24px;
     padding: 24px 12px;
     width: 100%;
-
-    &:not(.box--430),
-    &:not(.box--480),
-    &:not(.box--500),
-    &:not(.box--560),
-    &:not(.box--780),
-    &:not(.fancybox-content) {
-        @media(min-width: $sm) {
-            padding: 24px;
-        }
-        @media(min-width: $fhd) {
-            padding: 40px;
-        }
+    @media(min-width: $sm) {
+        padding: 24px 16px;
+    }
+    @media(min-width: $fhd) {
+        padding: 40px;
     }
 
     &.fancybox-content {
         background-color: var(--underlay);
         overflow: visible;
         padding: 24px 12px;
-        @media(min-width: 400px) {
-            padding: 24px;
-        }
     }
 
     &--430 {
         max-width: 430px;
         @media(min-width: 430px) {
-            padding: 32px 40px;
+            padding: 32px 40px !important;
         }
 
         &.fancybox-content {
             max-width: 430px;
             @media(min-width: 430px) {
-                padding: 32px 40px;
+                padding: 32px 40px !important;
             }
         }
     }
@@ -44,13 +33,13 @@
     &--480 {
         max-width: 480px;
         @media(min-width: 480px) {
-            padding: 32px 40px;
+            padding: 32px 40px !important;
         }
 
         &.fancybox-content {
             max-width: 480px;
             @media(min-width: 480px) {
-                padding: 32px 40px;
+                padding: 32px 40px !important;
             }
         }
     }
@@ -58,13 +47,13 @@
     &--500 {
         max-width: 500px;
         @media(min-width: 500px) {
-            padding: 32px 40px;
+            padding: 32px 40px !important;
         }
 
         &.fancybox-content {
             max-width: 500px;
             @media(min-width: 500px) {
-                padding: 32px 40px;
+                padding: 32px 40px !important;
             }
         }
     }
@@ -72,13 +61,13 @@
     &--560 {
         max-width: 560px;
         @media(min-width: 560px) {
-            padding: 32px 40px;
+            padding: 32px 40px !important;
         }
 
         &.fancybox-content {
             max-width: 560px;
             @media(min-width: 560px) {
-                padding: 32px 40px;
+                padding: 32px 40px !important;
             }
         }
     }
@@ -86,13 +75,13 @@
     &--780 {
         max-width: 780px;
         @media(min-width: 780px) {
-            padding: 32px 40px;
+            padding: 32px 40px !important;
         }
 
         &.fancybox-content {
             max-width: 780px;
             @media(min-width: 780px) {
-                padding: 32px 40px;
+                padding: 32px 40px !important;
             }
         }
     }
@@ -170,6 +159,12 @@
     &__subtitle {
         color: var(--grey);
 
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+
+    .stripe-table-2 {
         &:not(:last-child) {
             margin-bottom: 24px;
         }

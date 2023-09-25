@@ -13,7 +13,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 24px 32px;
+    padding: 24px 16px;
+    @media(min-width: $fhd) {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
 
     &__left {
         align-items: center;
