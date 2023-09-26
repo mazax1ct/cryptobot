@@ -1,4 +1,11 @@
+.banner + .page-section {
+    padding-top: 0;
+}
+
 .page-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
     &:not(:last-child) {
         margin-bottom: var(--section_vertical_gap);
     }
@@ -6,11 +13,10 @@
     &__container {
         margin-left: auto;
         margin-right: auto;
-        max-width: calc(1240px + 24px);
-        padding-left: 24px;
-        padding-right: 24px;
+        max-width: 1240px;
+        padding-left: 16px;
+        padding-right: 16px;
         @media(min-width: $hd) {
-            max-width: calc(1240px + 40px);
             padding-left: 40px;
             padding-right: 40px;
         }

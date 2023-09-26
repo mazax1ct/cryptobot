@@ -1,0 +1,38 @@
+.register-discount {
+    align-items: center;
+    background-color: rgba(0,0,0,0.08);
+    display: flex;
+    min-height: 112px;
+    padding-left: 24px;
+    padding-right: 24px;
+    @media(min-width: $md) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    &__text {
+        align-items: center;
+        display: flex;
+        gap: 16px;
+        @media(min-width: $hd) {
+            gap: 32px;
+        }
+
+        svg {
+            fill: var(--primary);
+            height: 16px;
+            min-width: 16px;
+            width: 16px;
+        }
+    }
+}
+
+.page-section__container {
+    .register-discount {
+        @media(min-width: $hd) {
+            margin-left: -40px;
+            margin-right: -40px;
+            width: calc(100% + 80px);
+        }
+    }
+}

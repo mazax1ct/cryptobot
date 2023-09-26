@@ -18,10 +18,8 @@ $fhd: 1900px;
     --f-warning: #c4334d;
     --main_font_family: 'Roboto', Arial, sans-serif;
     --shadow: 0 4px 4px 0 rgba(0,0,0, 0.04);
-    --base_gap: 12px;
     --section_vertical_gap: 40px;
     @media(min-width: $hd) {
-        --base_gap: 24px;
         --section_vertical_gap: 80px;
     }
 }

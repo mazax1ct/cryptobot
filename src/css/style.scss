@@ -16,6 +16,7 @@
 @import "base/_tabs-menu.scss";
 @import "base/_responsive-video.scss";
 @import "base/_accordion.scss";
+@import "base/_page-section.scss";
 @import "base/_tippy-custom-dark-theme.scss";
 @import "plugins/select2.css";
 @import "base/_select2-custom.scss";
@@ -25,7 +26,11 @@
 @import "_header.scss";
 @import "_back.scss";
 @import "_banner.scss";
-@import "_page-section.scss";
+@import "_features.scss";
+@import "_hiw.scss";
+@import "_plans.scss";
+@import "_partners.scss";
+@import "_register-discount.scss";
 @import "_not-recomendation.scss";
 @import "_personal.scss";
 @import "_report.scss";

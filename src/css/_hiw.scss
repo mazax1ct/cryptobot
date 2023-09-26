@@ -1,0 +1,17 @@
+.hiw {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .page-section__container {
+        background-color: rgba(#000,0.08);
+        border-radius: 24px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        @media(min-width: $hd) {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+}
+
+.hiw-steps {}

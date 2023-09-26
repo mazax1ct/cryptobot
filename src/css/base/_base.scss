@@ -11,6 +11,11 @@ html {
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
 body {
     background-color: var(--background);
     color: var(--light);
@@ -42,6 +47,8 @@ body {
 }
 
 .main-page {
+    background-color: var(--black);
+
     .page-content {
         padding: 0;
     }
@@ -91,8 +98,6 @@ body {
     gap: var(--gap);
     @media(min-width: $hd) {
         flex-direction: row;
-    }
-    @media(min-width: $hd) {
         --gap: 24px;
     }
 
@@ -139,7 +144,61 @@ h3,
 h4,
 h5,
 h6 {
-    margin-top: 0;
+    line-height: 1.25;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+h1 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    @media(min-width: $hd) {
+        font-size: 40px;
+        margin-bottom: 32px;
+    }
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    @media(min-width: $hd) {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    &:not(:first-child) {
+        margin-top: 20px;
+        @media(min-width: $hd) {
+            margin-top: 40px;
+        }
+    }
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    @media(min-width: $hd) {
+        font-size: 28px;
+    }
+
+    &:not(:first-child) {
+        margin-top: 20px;
+    }
+}
+
+h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    @media(min-width: $hd) {
+        font-size: 24px;
+    }
+
+    &:not(:first-child) {
+        margin-top: 20px;
+    }
 }
 
 p {
@@ -232,13 +291,28 @@ hr {
     }
 
     th {
-        color: var(--light);
         background-color: var(--darkgrey);
+        color: var(--light);
+        font-weight: 500;
+
+        a {
+            align-items: center;
+            color: var(--light);
+            display: flex;
+            @include hover {
+                color: var(--primary);
+            }
+
+            .sortarrow {
+                display: inline-block;
+                height: 20px;
+                width: 16px;
+            }
+        }
     }
 
     td,
     th {
-        font-weight: 400;
         padding: 8px;
         @media(min-width: $sm) {
             height: 52px;
@@ -246,6 +320,7 @@ hr {
     }
 
     td {
+        font-weight: 400;
         @media(max-width: $sm - 1px) {
             align-items: center;
             display: flex;

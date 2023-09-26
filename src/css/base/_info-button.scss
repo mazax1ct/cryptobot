@@ -2,10 +2,11 @@
     @include button-reset;
     @include active-area;
     align-items: center;
-    display: flex;
+    display: inline-flex;
     height: 20px;
     justify-content: center;
     position: relative;
+    vertical-align: middle;
     width: 20px;
     z-index: auto;
 
