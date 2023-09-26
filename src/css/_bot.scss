@@ -19,12 +19,14 @@
     gap: 12px;
     justify-content: space-between;
     padding: 12px;
+    @media(min-width: $md) {
+        flex-wrap: nowrap;
+    }
     @media(min-width: $hd) {
-        padding: 24px 16px;
+        padding: 16px;
     }
     @media(min-width: $fhd) {
-        padding-left: 32px;
-        padding-right: 32px;
+        padding: 24px 32px;
     }
 
     &--not_active {
@@ -46,10 +48,17 @@
     &__left {
         align-items: center;
         display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        @media(max-width: $hd - 1px) {
+        flex-grow: 1;
+        gap: 8px 16px;
+        @media(max-width: $md - 1px) {
+            flex-wrap: wrap;
             width: 100%;
+        }
+        @media(min-width: $md) {
+            width: calc(100% - 432px);
+        }
+        @media(min-width: $fhd) {
+            width: calc(100% - 720px);
         }
     }
 
@@ -60,57 +69,106 @@
         display: flex;
         justify-content: center;
         height: 64px;
+        min-width: 120px;
         padding: 8px;
         width: 120px;
     }
 
+    &__title-block {
+        @media(min-width: $md) {
+            flex-grow: 1;
+            width: calc(100% - 136px);
+        }
+    }
+
     &__title {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.2;
         margin: 0;
-        @media(min-width: $hd) {
+        @media(min-width: $md) {
+            display: flex;
+        }
+        @media(min-width: $fhd) {
             font-size: 20px;
+        }
+
+        span {
+            @media(min-width: $md) {
+                max-width: calc(100% - 70px);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
         }
 
         sup {
             color: var(--grey);
             font-size: 12px;
+            padding-left: 4px;
             white-space: nowrap;
         }
     }
 
     &__right {
-        align-items: center;
+        @media(max-width: $md - 1px) {
+            width: 100%;
+        }
+        @media(min-width: $fhd) {
+            align-items: center;
+            display: flex;
+            gap: 8px;
+        }
+
+        &--mod_1 {
+            @media(min-width: 480px) {
+                align-items: center;
+                display: flex;
+                gap: 8px;
+            }
+
+            .bot__date {
+                @media(min-width: 480px) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &__right-buttons {
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
+        @media(min-width: $md) {
+            flex-wrap: nowrap;
+        }
 
         .button {
-            @media(max-width: $md - 1px) {
-                width: 48px;
+            border-radius: 8px;
+            font-size: 14px;
+            height: 36px;
+            @media(min-width: $fhd) {
+                border-radius: 12px;
+                font-size: 16px;
+                height: 48px;
             }
 
             span {
-                @media(max-width: $md - 1px) {
+                & + svg {
                     display: none;
                 }
+            }
 
-                & + svg {
-                    @media(min-width: $md) {
-                        display: none;
-                    }
+            &.button--square {
+                width: 36px;
+                @media(min-width: $fhd) {
+                    width: 48px;
                 }
             }
 
             &:not(.button--square) {
-                @media(min-width: $md) {
-                    min-width: 168px;
-                }
-            }
-
-            &.button--red {
-                @media(min-width: $md) {
-                    min-width: 0;
+                min-width: 120px;
+                @media(min-width: $fhd) {
+                    min-width: 154px;
                 }
             }
         }
@@ -118,9 +176,15 @@
 
     &__date {
         color: var(--grey);
-        margin-right: 8px;
-        @media(max-width: $sm - 1px) {
-            width: 100%;
+        white-space: nowrap;
+        @media(min-width: $hd) {
+            text-align: right;
+        }
+        @media(max-width: $fhd - 1px) {
+            margin-bottom: 8px;
+        }
+        @media(min-width: $fhd) {
+            margin-right: 8px;
         }
     }
 }

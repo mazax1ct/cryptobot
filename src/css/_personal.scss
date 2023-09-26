@@ -53,7 +53,7 @@
         z-index: 5;
         @media(min-width: $sm) {
             min-height: 96px;
-            padding: 24px 16px;
+            padding: 16px;
         }
         @media(min-width: $hd) {
             background-color: var(--underlay);
@@ -111,7 +111,7 @@
     @media(min-width: $hd) {
         background-color: var(--underlay);
         border-radius: 24px;
-        padding: 24px 16px;
+        padding: 16px;
     }
     @media(min-width: $fhd) {
         padding: 40px;

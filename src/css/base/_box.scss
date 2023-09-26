@@ -1,10 +1,10 @@
 .box {
     background-color: var(--underlay);
     border-radius: 24px;
-    padding: 24px 12px;
+    padding: 16px 12px;
     width: 100%;
     @media(min-width: $sm) {
-        padding: 24px 16px;
+        padding: 16px;
     }
     @media(min-width: $fhd) {
         padding: 40px;
@@ -13,7 +13,13 @@
     &.fancybox-content {
         background-color: var(--underlay);
         overflow: visible;
-        padding: 24px 12px;
+        padding: 16px 12px;
+        @media(min-width: $sm) {
+            padding: 16px;
+        }
+        @media(min-width: $fhd) {
+            padding: 40px;
+        }
     }
 
     &--430 {
