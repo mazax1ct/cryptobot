@@ -14,4 +14,52 @@
     }
 }
 
-.hiw-steps {}
+.hiw-steps {
+    margin-top: 40px;
+    display: flex;
+    --gap: 12px;
+    gap: var(--gap);
+    flex-wrap: wrap;
+
+    .hiw-step {
+        width: 100%;
+        @media(min-width: $sm) {
+            width: calc(100% / 2 - var(--gap));
+        }
+        @media(min-width: $sm) {
+            width: calc(100% / 2 - var(--gap));
+        }
+        @media(min-width: $md) {
+            width: calc(100% / 3 - var(--gap) * 2 / 3);
+        }
+    }
+}
+
+.hiw-step {
+    align-items: flex-end;
+    border-radius: 12px;
+    background-color: rgba(#000,0.08);
+    display: flex;
+    min-height: 160px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    z-index: auto;
+
+    span {
+        font-size: 280px;
+        background: linear-gradient(180deg, rgba(0, 168, 148, 0.15) 25.61%, rgba(0, 168, 148, 0.02) 74.39%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        left: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    p {
+        position: relative;
+        z-index: 1;
+    }
+}
