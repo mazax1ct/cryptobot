@@ -123,20 +123,3 @@ $(document).on('click', '.accordion__toggler', function () {
   $(this).closest('.accordion').find('.accordion__body').slideToggle();
   return false;
 });
-
-$(document).on('keyup', '.suggest input', function () {
-  if($(this).val() != '') {
-    $(this).closest('.suggest').find('.suggest__dropdown').addClass('is-open');
-  } else {
-    $(this).closest('.suggest').find('.suggest__dropdown').removeClass('is-open');
-  }
-
-  return false;
-});
-
-$(document).on('click', '.suggest__button', function () {
-  $('.suggest input').val($(this).text());
-  $(this).closest('.suggest').find('.suggest__dropdown').removeClass('is-open');
-
-  return false;
-});
