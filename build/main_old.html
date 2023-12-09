@@ -29,7 +29,7 @@
 </head>
 
 <body class="main-page">
-    <header class="header header--island header--float">
+    <header class="header header--float">
         <div class="header__container">
             <button class="js-menu-opener header__burger" type="button" title="Меню">
                 <svg aria-hidden="true">
@@ -47,10 +47,10 @@
                 <div class="main-menu__inner">
                     <ul class="js-main-menu main-menu__list">
                         <li class="main-menu__item">
-                            <a class="main-menu__link" href="#1">Начало</a>
+                            <a class="main-menu__link" href="#1">Преимущества</a>
                         </li>
                         <li class="main-menu__item">
-                            <a class="main-menu__link" href="#2">О проекте</a>
+                            <a class="main-menu__link" href="#2">Как это работает?</a>
                         </li>
                         <li class="main-menu__item">
                             <a class="main-menu__link" href="#3">Тарифы</a>
@@ -73,73 +73,65 @@
     </header>
 
     <main class="page-content">
-        <div id="1" class="banner_2">
-            <div id="canvas" class="banner_2__canvas"></div>
-            <div class="banner_2__content">
-                <h1 class="banner_2__title">Алготрейдинг</h1>
-                <p class="banner_2__subtitle">Торговля криптовалютой с максимальным доходом</p>
-                <p class="banner_2__text">RealTrade – команда, объединенная одним интересом – профессиональной криптовалютной торговлей. Для этого Нами разработан уникальный торговый бот для максимальной доходности</p>
-                <a class="fancy-button" href="javascript:void(0)"><span>Зарегистрироваться</span></a>
+        <div class="banner">
+            <picture class="banner__image">
+                <source src="images/content/banner_desk.webp" srcset="images/content/banner_desk@2x.webp 2x" type="image/webp">
+                <img src="images/content/banner_desk.png" srcset="images/content/banner_desk@2x.png 2x" alt="">
+            </picture>
+        
+            <div class="banner__content">
+                <h1 class="banner__title">Автоматизируй свой<br> криптотрейдинг<br> профессиональным ботом</h1>
+                <p class="banner__text">
+                    <span>>1 000</span> довольных пользователей<br>
+                    <span>>10 000</span> криптовалютных пар<br>
+                    <span>>1 млн.</span> комбинаций настроек бота<br>
+                    <span>5</span> бирж для работы
+                </p>
+                <a class="button button--green button--bordered button--h_48" href="#3"><span>Выбрать тариф</span></a>
             </div>
         </div>
 
-        <section id="2" class="road-map-section page-section">
+        <section id="1" class="page-section">
             <div class="page-section__container">
-                <h2>Дорожная <span class="color-green">карта</span></h2>
-            </div>
         
-            <div class="js-drag-scroll road-map">
-                <div class="road-map__back">
-                    <div class="road-map__path">
-                        <div class="road-map__point is-active">
-                            <img draggable="false" src="images/content/road-map/point_1.svg" alt="">
-                            <p>Разработка<br> алгоритма</p>
-                        </div>
-                        <div class="road-map__point is-active">
-                            <img draggable="false" src="images/content/road-map/point_2.svg" alt="">
-                            <p>Получение партнерства<br> ведущих криптобирж</p>
-                        </div>
-                        <div class="road-map__point is-active">
-                            <img draggable="false" src="images/content/road-map/point_3.svg" alt="">
-                            <p>Закрытое<br> тестирования бота</p>
-                        </div>
-                        <div class="road-map__point is-active">
-                            <p class="road-map__point-title">Вы находитесь здесь!</p>
-                            <img draggable="false" src="images/content/road-map/point_4.svg" alt="">
-                            <p>Открытие предварительной<br> регистрации</p>
-                        </div>
-                        <div class="road-map__point">
-                            <img draggable="false" src="images/content/road-map/point_5.svg" alt="">
-                            <p>Доступ<br> к личному кабинету</p>
-                        </div>
-                        <div class="road-map__point">
-                            <img draggable="false" src="images/content/road-map/point_6.svg" alt="">
-                            <p>Запуск торгового бота на<br> криптобиржах</p>
-                        </div>
-                        <div class="road-map__point">
-                            <img draggable="false" src="images/content/road-map/point_7.svg" alt="">
-                            <p>Торговый индикатор для<br> TradingView</p>
-                        </div>
-                        <div class="road-map__point">
-                            <img draggable="false" src="images/content/road-map/point_8.svg" alt="">
-                            <p>Расширение<br> функционала бота</p>
-                        </div>
-                        <div class="road-map__point">
-                            <p class="road-map__point-title">Поехали!</p>
-                            <img draggable="false" src="images/content/road-map/point_9.svg" alt="">
-                            <p>Подключение<br> криптотрейдинга</p>
-                        </div>
+                <div class="features">
+                    <h2>Преимущества<br> <span class="color-green">торгового бота</span></h2>
+        
+                    <div class="feature">
+                        <div class="feature__icon"><img src="images/content/features/img_1.svg" alt=""></div>
+                        <p>Гибкая настройка позволяет тонко настроить торговую стратегию и подойдет под любой бюджет</p>
+                    </div>
+        
+                    <div class="feature">
+                        <div class="feature__icon"><img src="images/content/features/img_2.svg" alt=""></div>
+                        <p>Полностью прозрачная стратегия с интуитивно понятными настройками</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon"><img src="images/content/features/img_3.svg" alt=""></div>
+                        <p>Бот работает циклически и ему не нужно определять торговый диапазон работы. Сетка будет ходить за ценой</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon"><img src="images/content/features/img_4.svg" alt=""></div>
+                        <p>У бота предусмотрена функция реинвестирования. Вам не нужно останавливать бота и менять настройки. Бот автоматически реинвестирует полученную прибыль</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon"><img src="images/content/features/img_5.svg" alt=""></div>
+                        <p>Функция проверки настроенного бота на исторических данных. Позволяет проверить, как бот с вашими настройками работал бы в прошлом и какую доходность мог получить</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="2" class="hiw_2 page-section">
+        <section id="2" class="hiw page-section">
             <div class="page-section__container">
+                <h2>Как это работает?</h2>
         
-                <div class="hiw_2-steps">
-                    <h2>Как это<br> <span class="color-green">работает?</span></h2>
+                <div class="responsive-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8UmxKmVPfBI?si=DWapnFMW2To97G3g" title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
         
+                <div class="hiw-steps">
                     <div class="hiw-step">
                         <span>1</span>
                         <p>Оформляете подписку</p>
@@ -492,25 +484,5 @@
 <script src="js/air-datepicker.js"></script>
 
 <script src="js/main.js"></script>
-
-<script src="js/drag-scroll.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-
-<script>
-    VANTA.NET({
-        el: "#canvas",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0x3fffa4,
-        backgroundColor: 0x1F1F1F
-    })
-</script>
 
 </html>
