@@ -25,10 +25,10 @@
 @import "base/_air-datepicker-custom.scss";
 @import "plugins/jquery.fancybox.scss";
 @import "_header.scss";
-@import "_back.scss";
-@import "_banner.scss";
-@import "_features.scss";
-@import "_hiw.scss";
+@import "_back.scss"; //@import "_banner.scss";
+@import "_banner_2.scss";
+@import "_road-map.scss"; //@import "_features.scss"; //@import "_hiw.scss";
+@import "_hiw_2.scss";
 @import "_plans.scss";
 @import "_partners.scss";
 @import "_register-discount.scss";

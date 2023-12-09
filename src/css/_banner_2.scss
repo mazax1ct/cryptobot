@@ -1,0 +1,99 @@
+.banner_2 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    min-height: 600px;
+    padding-top: 60px;
+    position: relative;
+    z-index: auto;
+    @media(min-width: $hd) {
+        padding-top: 96px;
+    }
+    /*&:not(:last-child) {
+        margin-bottom: 40px;
+        @media(min-width: $hd) {
+            margin-bottom: 80px;
+        }
+        @media(min-width: $fhd) {
+            margin-bottom: 120px;
+        }
+    }*/
+    &__canvas {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+
+        &::before {
+            background: radial-gradient(50% 50% at 50% 0%, #08413A 0%, rgba(0,0,0,0) 100%);
+            bottom: 0;
+            content: '';
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+        }
+
+        &::after {
+            background: linear-gradient(0deg, rgba(31, 31, 31, 0.80) 0%, rgba(31, 31, 31, 0.00) 50%);
+            bottom: 0;
+            content: '';
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 2;
+        }
+    }
+
+    &__content {
+        max-width: calc(1240px + 24px);
+        margin-left: auto;
+        margin-right: auto;
+        padding: 40px 16px;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        z-index: 2;
+        @media(min-width: $hd) {
+            max-width: calc(1240px + 40px);
+            padding: 80px 20px;
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+        line-height: 1;
+        margin-bottom: 16px;
+        margin-top: 0;
+        text-transform: uppercase;
+        @media(min-width: $hd) {
+            font-size: 40px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 64px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1;
+        margin-bottom: 16px;
+        @media(min-width: $hd) {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__text {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+        max-width: 646px;
+    }
+}

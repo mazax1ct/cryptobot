@@ -1,0 +1,101 @@
+.road-map-section {
+    background-color: rgba(#000,0.08);
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    &:not(:last-child) {
+        @media(min-width: $fhd) {
+            margin-bottom: 120px;
+        }
+    }
+}
+
+.road-map {
+    cursor: grab;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &__back {
+        align-items: center;
+        background: url("../images/backgrounds/road-map-bg.svg") no-repeat 0 0 transparent;
+        display: flex;
+        height: 380px;
+        width: 3240px;
+    }
+
+    &__path {
+        background: url("../images/backgrounds/road-map-path.svg") no-repeat 0 0 transparent;
+        display: flex;
+        height: 117px;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &__point {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 256px;
+        margin-right: 40px;
+        text-align: center;
+        position: relative;
+        user-select: none;
+        width: 240px;
+        z-index: 1;
+
+        &:nth-child(1) {
+            margin-left: 380px;
+            top: -16px;
+        }
+
+        &:nth-child(2) {
+            top: -96px;
+        }
+
+        &:nth-child(3) {
+            top: -29px;
+        }
+
+        &:nth-child(4) {
+            top: -59px;
+        }
+
+        &:nth-child(5) {
+            top: -49px;
+        }
+
+        &:nth-child(6) {
+            top: -128px;
+        }
+
+        &:nth-child(7) {
+            top: -30px;
+        }
+
+        &:nth-child(8) {
+            top: -96px;
+        }
+
+        &:nth-child(9) {
+            top: -48px;
+        }
+
+        img {
+            user-drag: none;
+            user-select: none;
+        }
+    }
+
+    &__point-title {
+        font-size: 20px;
+        font-weight: 700;
+    }
+}

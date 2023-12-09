@@ -29,7 +29,7 @@
 </head>
 
 <body class="main-page">
-    <header class="header header--float">
+    <header class="header header--island header--float">
         <div class="header__container">
             <button class="js-menu-opener header__burger" type="button" title="Меню">
                 <svg aria-hidden="true">
@@ -47,10 +47,10 @@
                 <div class="main-menu__inner">
                     <ul class="js-main-menu main-menu__list">
                         <li class="main-menu__item">
-                            <a class="main-menu__link" href="#1">Преимущества</a>
+                            <a class="main-menu__link" href="#1">Начало</a>
                         </li>
                         <li class="main-menu__item">
-                            <a class="main-menu__link" href="#2">Как это работает?</a>
+                            <a class="main-menu__link" href="#2">О проекте</a>
                         </li>
                         <li class="main-menu__item">
                             <a class="main-menu__link" href="#3">Тарифы</a>
@@ -73,65 +73,73 @@
     </header>
 
     <main class="page-content">
-        <div class="banner">
-            <picture class="banner__image">
-                <source src="images/content/banner_desk.webp" srcset="images/content/banner_desk@2x.webp 2x" type="image/webp">
-                <img src="images/content/banner_desk.png" srcset="images/content/banner_desk@2x.png 2x" alt="">
-            </picture>
-        
-            <div class="banner__content">
-                <h1 class="banner__title">Автоматизируй свой<br> криптотрейдинг<br> профессиональным ботом</h1>
-                <p class="banner__text">
-                    <span>>1 000</span> довольных пользователей<br>
-                    <span>>10 000</span> криптовалютных пар<br>
-                    <span>>1 млн.</span> комбинаций настроек бота<br>
-                    <span>5</span> бирж для работы
-                </p>
-                <a class="button button--green button--bordered button--h_48" href="#3"><span>Выбрать тариф</span></a>
+        <div id="1" class="banner_2">
+            <div id="canvas" class="banner_2__canvas"></div>
+            <div class="banner_2__content">
+                <h1 class="banner_2__title">Алготрейдинг</h1>
+                <p class="banner_2__subtitle">Торговля криптовалютой с максимальным доходом</p>
+                <p class="banner_2__text">RealTrade – команда, объединенная одним интересом – профессиональной криптовалютной торговлей. Для этого Нами разработан уникальный торговый бот для максимальной доходности</p>
+                <a class="fancy-button" href="javascript:void(0)"><span>Зарегистрироваться</span></a>
             </div>
         </div>
 
-        <section id="1" class="page-section">
+        <section id="2" class="road-map-section page-section">
             <div class="page-section__container">
+                <h2>Дорожная <span class="color-green">карта</span></h2>
+            </div>
         
-                <div class="features">
-                    <h2>Преимущества<br> <span class="color-green">торгового бота</span></h2>
-        
-                    <div class="feature">
-                        <div class="feature__icon"><img src="images/content/features/img_1.svg" alt=""></div>
-                        <p>Гибкая настройка позволяет тонко настроить торговую стратегию и подойдет под любой бюджет</p>
-                    </div>
-        
-                    <div class="feature">
-                        <div class="feature__icon"><img src="images/content/features/img_2.svg" alt=""></div>
-                        <p>Полностью прозрачная стратегия с интуитивно понятными настройками</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature__icon"><img src="images/content/features/img_3.svg" alt=""></div>
-                        <p>Бот работает циклически и ему не нужно определять торговый диапазон работы. Сетка будет ходить за ценой</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature__icon"><img src="images/content/features/img_4.svg" alt=""></div>
-                        <p>У бота предусмотрена функция реинвестирования. Вам не нужно останавливать бота и менять настройки. Бот автоматически реинвестирует полученную прибыль</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature__icon"><img src="images/content/features/img_5.svg" alt=""></div>
-                        <p>Функция проверки настроенного бота на исторических данных. Позволяет проверить, как бот с вашими настройками работал бы в прошлом и какую доходность мог получить</p>
+            <div class="js-drag-scroll road-map">
+                <div class="road-map__back">
+                    <div class="road-map__path">
+                        <div class="road-map__point is-active">
+                            <img draggable="false" src="images/content/road-map/point_1.svg" alt="">
+                            <p>Разработка<br> алгоритма</p>
+                        </div>
+                        <div class="road-map__point is-active">
+                            <img draggable="false" src="images/content/road-map/point_2.svg" alt="">
+                            <p>Получение партнерства<br> ведущих криптобирж</p>
+                        </div>
+                        <div class="road-map__point is-active">
+                            <img draggable="false" src="images/content/road-map/point_3.svg" alt="">
+                            <p>Закрытое<br> тестирования бота</p>
+                        </div>
+                        <div class="road-map__point is-active">
+                            <p class="road-map__point-title">Вы находитесь здесь!</p>
+                            <img draggable="false" src="images/content/road-map/point_4.svg" alt="">
+                            <p>Открытие предварительной<br> регистрации</p>
+                        </div>
+                        <div class="road-map__point">
+                            <img draggable="false" src="images/content/road-map/point_5.svg" alt="">
+                            <p>Доступ<br> к личному кабинету</p>
+                        </div>
+                        <div class="road-map__point">
+                            <img draggable="false" src="images/content/road-map/point_6.svg" alt="">
+                            <p>Запуск торгового бота на<br> криптобиржах</p>
+                        </div>
+                        <div class="road-map__point">
+                            <img draggable="false" src="images/content/road-map/point_7.svg" alt="">
+                            <p>Торговый индикатор для<br> TradingView</p>
+                        </div>
+                        <div class="road-map__point">
+                            <img draggable="false" src="images/content/road-map/point_8.svg" alt="">
+                            <p>Расширение<br> функционала бота</p>
+                        </div>
+                        <div class="road-map__point">
+                            <p class="road-map__point-title">Поехали!</p>
+                            <img draggable="false" src="images/content/road-map/point_9.svg" alt="">
+                            <p>Подключение<br> криптотрейдинга</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="2" class="hiw page-section">
+        <section id="2" class="hiw_2 page-section">
             <div class="page-section__container">
-                <h2>Как это работает?</h2>
         
-                <div class="responsive-video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8UmxKmVPfBI?si=DWapnFMW2To97G3g" title="YouTube video player" frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
+                <div class="hiw_2-steps">
+                    <h2>Как это<br> <span class="color-green">работает?</span></h2>
         
-                <div class="hiw-steps">
                     <div class="hiw-step">
                         <span>1</span>
                         <p>Оформляете подписку</p>
@@ -160,6 +168,8 @@
             </div>
         </section>
 
+        <!--//= template/main_page/features.html-->
+
         <section id="3" class="page-section">
             <div class="page-section__container">
                 <h2>Тарифные <span class="color-green">планы</span></h2>
@@ -170,7 +180,11 @@
                             <p class="plan__title">Базовый</p>
         
                             <ul class="plan__features">
-                                <li>Доступ к универсальному фьючерсному боту</li>
+                                <li>
+                                    Ручной режим закрытия <nobr>ордеров<button class="info-button" type="button" title="Информация" data-tippy-content="Полезная информация"><svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#question"></use>
+                                            </svg></button></nobr>
+                                </li>
                             </ul>
         
                             <p class="plan__price"><span class="value">50</span> <span class="currency">USDT</span> / в месяц</p>
@@ -184,8 +198,12 @@
                             <p class="plan__title">Продвинутый</p>
         
                             <ul class="plan__features">
-                                <li>Доступ к универсальному фьючерсному боту</li>
-                                <li>Проверка на исторических данных</li>
+                                <li>
+                                    Расширенные настройки <nobr>бота<button class="info-button" type="button" title="Информация" data-tippy-content="Полезная информация"><svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#question"></use>
+                                            </svg></button></nobr>
+                                </li>
+                                <li>Ручной режим закрытия ордеров</li>
                             </ul>
         
                             <p class="plan__price"><span class="value">100</span> <span class="currency">USDT</span> / в месяц</p>
@@ -199,15 +217,17 @@
                             <p class="plan__title">VIP</p>
         
                             <ul class="plan__features">
-                                <li>Доступ к универсальному фьючерсному боту</li>
-                                <li>Проверка на исторических данных</li>
+                                <li>Весь спектр настроек бота</li>
+                                <li>Ручной режим закрытие ордеров</li>
                                 <li>
-                                    ATR анализ
-                                    <button class="info-button" type="button" title="Информация" data-tippy-content="Полезная информация">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="images/sprite.svg#question"></use>
-                                        </svg>
-                                    </button>
+                                    Визуальное отображение <nobr>стратегии<button class="info-button" type="button" title="Информация" data-tippy-content="Полезная информация"><svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#question"></use>
+                                            </svg></button></nobr>
+                                </li>
+                                <li>
+                                    Индикатор для анализа <nobr>рынка<button class="info-button" type="button" title="Информация" data-tippy-content="Полезная информация"><svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#question"></use>
+                                            </svg></button></nobr>
                                 </li>
                             </ul>
         
@@ -232,8 +252,7 @@
                         </svg>
                     </button>
                     <div class="accordion__body">
-                        <p>Торговый бот — это программа, используемая для автоматизации сделок и принятия решения о покупке или продаже на основе рыночных данных и заранее определенных правил.</p>
-                        <p>Для начало работы Вам нужно связать свою биржу по API ключам с торговым ботом и установить определенные параметры, чтобы указать боту, как действовать.</p>
+                        <p>Торговый бот - это программа с заложенным в нем алгоритмом используемая для автоматизации торговли криптовалют.</p>
                     </div>
                 </div>
         
@@ -245,8 +264,7 @@
                         </svg>
                     </button>
                     <div class="accordion__body">
-                        <p>Торговый бот — это программа, используемая для автоматизации сделок и принятия решения о покупке или продаже на основе рыночных данных и заранее определенных правил.</p>
-                        <p>Для начало работы Вам нужно связать свою биржу по API ключам с торговым ботом и установить определенные параметры, чтобы указать боту, как действовать.</p>
+                        <p>Торговый бот будет автоматически выполнять мониторинг рынка и совершать множество сделок без вашего непосредственного участия, получая прибыль круглосуточно, а также и исключая человеческий фактор.</p>
                     </div>
                 </div>
         
@@ -258,8 +276,8 @@
                         </svg>
                     </button>
                     <div class="accordion__body">
-                        <p>Торговый бот — это программа, используемая для автоматизации сделок и принятия решения о покупке или продаже на основе рыночных данных и заранее определенных правил.</p>
-                        <p>Для начало работы Вам нужно связать свою биржу по API ключам с торговым ботом и установить определенные параметры, чтобы указать боту, как действовать.</p>
+                        <p>Конечно, боты для торговли криптовалютой делают торговлю более эффективной, поскольку они могут работать в многозадачном режиме, проводить анализ нескольких криптовалют, проводить сделки, сканировать рынок и т. д. Нет никаких
+                            шансов, что Ваш бот упустит возможность, как это сделал бы человек.</p>
                     </div>
                 </div>
         
@@ -271,8 +289,8 @@
                         </svg>
                     </button>
                     <div class="accordion__body">
-                        <p>Торговый бот — это программа, используемая для автоматизации сделок и принятия решения о покупке или продаже на основе рыночных данных и заранее определенных правил.</p>
-                        <p>Для начало работы Вам нужно связать свою биржу по API ключам с торговым ботом и установить определенные параметры, чтобы указать боту, как действовать.</p>
+                        <p>Нет, если соблюдать риск-менеджмент и Наши рекомендации, Вы сможете уберечь себя от ликвидации сделок при волатильности рынка.</p>
+                        <p>Для большей безопасности перед запуском торгового бота выставленные Вами настройки можно проверить на исторических данных, а также есть видео инструкция, где подробно раскрыта каждая настройка.</p>
                     </div>
                 </div>
         
@@ -284,8 +302,7 @@
                         </svg>
                     </button>
                     <div class="accordion__body">
-                        <p>Торговый бот — это программа, используемая для автоматизации сделок и принятия решения о покупке или продаже на основе рыночных данных и заранее определенных правил.</p>
-                        <p>Для начало работы Вам нужно связать свою биржу по API ключам с торговым ботом и установить определенные параметры, чтобы указать боту, как действовать.</p>
+                        <p>Наш бот - это цифровой продукт выраженный в многолетнем опыте работы на рынке, личных идей и реальной практике. Как и любой коммерческий продукт, Мы заинтересованы в его распространении.</p>
                     </div>
                 </div>
             </div>
@@ -477,5 +494,25 @@
 <script src="js/air-datepicker.js"></script>
 
 <script src="js/main.js"></script>
+
+<script src="js/drag-scroll.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+<script>
+    VANTA.NET({
+        el: "#canvas",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x3fffa4,
+        backgroundColor: 0x1F1F1F
+    })
+</script>
 
 </html>
